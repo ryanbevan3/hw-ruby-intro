@@ -11,7 +11,25 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.size() == 0
+    return 0
+  elsif arr.size() == 1
+    return arr[0]
+  else
+    larger = -10000
+    large = -10000
+    for val in arr
+      if val > large
+        if val > larger
+          large = larger
+          larger = val
+        else
+          large = val
+        end
+      end
+    end
+  end
+  return larger + large
 end
 
 def sum_to_n? arr, n
