@@ -55,7 +55,16 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  if s.size() == 0
+    return false
+  end
+  arr = ['I', 'i', 'A', 'a', 'E', 'e', 'O', 'o', 'U', 'u']
+  if !arr.include? s[0]
+    if s[0] =~ /[[:alpha:]]/
+      return true
+    end
+  end
+  return false
 end
 
 def binary_multiple_of_4? s
